@@ -1,0 +1,11 @@
+.header a {
+  margin-right: 20px;
+  padding: 2px 5px;
+}
+.header a:hover {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.header {
+  box-shadow: 4px 4px 8px rgb(197, 197, 197);
+}
