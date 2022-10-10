@@ -5,7 +5,8 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
-  const { name, total, logo } = card;
+  const { id, name, total, logo } = card;
+  console.log(card.id);
   return (
     <div>
       <div className="border-solid border border-neutral-300 m-3 p-5 rounded-lg single-card flex mt-8 bg-gradient-to-r from-purple-500 to-pink-500">
@@ -16,7 +17,7 @@ const Card = ({ card }) => {
             Total Quiz: <span className="font-bold">{total}</span>{" "}
           </p>
           <button className="mt-5 bg-white hover:bg-violet-500 rounded-lg py-2 px-4 border-solid border border-neutral-300 text-slate-900 font-bold hover:text-white">
-            <Link>Start Quiz</Link>{" "}
+            <Link to={`/quiz/${id}`}>Start Quiz</Link>{" "}
             <FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon>
           </button>
         </div>
