@@ -7,6 +7,7 @@ import Main from "./Outlet/Main";
 import Topics from "./components/Topics/Topics";
 import Statics from "./components/Statics/Statics";
 import Blog from "./components/Header/Blog/Blog";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,12 +15,22 @@ function App() {
       path: "/",
       element: <Main></Main>,
       children: [
-        { path: "home", element: <Home></Home> },
+        {
+          path: "/",
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+          element: <Home></Home>,
+        },
+        {
+          path: "home",
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+          element: <Home></Home>,
+        },
         { path: "topics", element: <Topics></Topics> },
         { path: "statics", element: <Statics></Statics> },
         { path: "blog", element: <Blog></Blog> },
       ],
     },
+    { path: "*", element: <ErrorPage></ErrorPage> },
   ]);
   return (
     <div className="App">
