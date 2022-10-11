@@ -9,7 +9,7 @@ const Home = () => {
   const topics = loadTopics.data;
   return (
     <div>
-      <div className=" px-10 mt-10 m-auto md:w-11/12 lg:w-8/12 img-container md:flex lg:pl-60">
+      <div className=" px-10 mt-10 m-auto md:w-11/12 lg:w-8/12 img-container md:flex lg:pl-60 ">
         <div>
           <img className="h-64" src={cover} alt="" />
         </div>
@@ -30,8 +30,8 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <h1 className="text-5xl mt-8">Select Your Topics</h1>
-      <div className="card-container">
+      <h1 className="text-5xl mt-16 underline ">Select Your Topics</h1>
+      <div className="card-container mb-10">
         {topics.map((card) => (
           <Card card={card} key={card.id}></Card>
         ))}
