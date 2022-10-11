@@ -22,9 +22,9 @@ const QuizOptions = ({ quizQuestion }) => {
   };
   return (
     <div className="quiz-container m-4 md:m-8 py-4 bg-gradient-to-r from-purple-200 to-pink-200 rounded-lg">
-      <div className="flex justify-center items-center px-3 ">
+      <div className="flex justify-center items-center px-3 relative">
         <h3 className="font-semibold text-slate-800 mr-10"> {question}</h3>
-        <button onClick={ShowAns}>
+        <button onClick={ShowAns} className="md:absolute right-7 top-0">
           <FontAwesomeIcon
             icon={faEye}
             className="text-rose-600 h-5 hover:text-emerald-500"
