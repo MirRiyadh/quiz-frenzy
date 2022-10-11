@@ -8,7 +8,7 @@ const Topics = () => {
   console.log(topics);
   return (
     <div>
-      <h1 className="text-5xl my-8 underline">Select Your Topics</h1>
+      <h1 className="text-5xl my-8 underline"> Topics</h1>
       <div className="card-container lg:pb-44 md:pb-20">
         {topics.map((card) => (
           <Card card={card} key={card.id}></Card>

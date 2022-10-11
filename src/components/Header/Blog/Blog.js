@@ -21,7 +21,7 @@ const Blog = () => {
   ];
   return (
     <div>
-      <h1 className="md:text-4xl my-4 underline">Blog Posts</h1>
+      <h1 className="text-5xl my-4 underline mb-7">Blog Posts</h1>
       <div className="lg:pb-36">
         {blogPosts.map((posts) => (
           <Posts posts={posts} key={posts.id}></Posts>
