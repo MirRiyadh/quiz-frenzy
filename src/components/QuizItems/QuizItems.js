@@ -7,8 +7,11 @@ const QuizItems = () => {
   const quiz = loadquiz.data;
   const questions = quiz.questions;
   return (
-    <div className="bg-sky-200 lg:w-9/12 m-auto mt-5">
-      <h2 className="text-2xl"> Quiz of {quiz.name}</h2>
+    <div className=" lg:w-6/12 m-auto mt-5">
+      <h2 className="text-4xl font-bold text-sky-600">
+        {" "}
+        Quiz of <span className="text-fuchsia-700">{quiz.name}</span>{" "}
+      </h2>
       {questions.map((question) => (
         <QuizOptions quizQuestion={question} key={question.id}></QuizOptions>
       ))}
