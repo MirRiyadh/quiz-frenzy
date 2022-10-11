@@ -17,7 +17,7 @@ const Statics = () => {
   const data = loadData.data;
 
   return (
-    <div>
+    <div className="pb-20 md:pb-80">
       <h1 className="text-5xl my-5 underline">Recharts</h1>
       <div className="md:flex justify-center lg:w-7/12 m-auto">
         <div className=" lg:w-8/12 mt-5 bg-sky-100 p-5">

@@ -8,7 +8,7 @@ const Header = () => {
     <div className="header md:flex justify-around items-center bg-gradient-to-r from-sky-500 to-indigo-500">
       <div>
         <Link to="/">
-          <img className="w-56" src={logo} alt="" />{" "}
+          <img className="w-56 m-auto" src={logo} alt="" />{" "}
         </Link>{" "}
       </div>
       <div className="text-white font-bold">
