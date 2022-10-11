@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import Option from "../QuizItems/Option/Option";
 import { click } from "@testing-library/user-event/dist/click";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const QuizOptions = ({ quizQuestion }) => {
   const { id, question, options, correctAnswer } = quizQuestion;
@@ -13,7 +15,7 @@ const QuizOptions = ({ quizQuestion }) => {
 
   const handleQuiz = (option) => {
     if (correctAnswer === option) {
-      alert("this is correct");
+      toast.success("are you happy", 500);
     } else {
       alert("worng");
     }
